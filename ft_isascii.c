@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 17:52:54 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/04 14:57:33 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/04 15:30:46 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 	RESULT VALUE :
 	Non-zero if c is ascii, zero if not.
 */
-
 
 int	ft_isascii(int c)
 {

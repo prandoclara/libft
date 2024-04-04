@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 16:39:43 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/04 15:03:18 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/04 15:28:11 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@
 	RETURN VALUE :
 	A pointer to memory area s.
 */
-
 
 void	*ft_memset(void *b, int c, size_t len)
 {

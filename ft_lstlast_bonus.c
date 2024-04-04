@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/31 17:08:22 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/04 14:58:59 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/04 15:30:25 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 	The last node of a list.
 		[.]->[.]->[.]->[LAST]->[NULL]
 */
-
 
 t_list	*ft_lstlast(t_list *lst)
 {
