@@ -6,11 +6,20 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 15:50:43 by claprand          #+#    #+#             */
-/*   Updated: 2024/03/26 16:07:55 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/04 15:04:38 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+	DESCRIPTION :
+	The function ft_strdup duplicates the given string s1 by allocating 
+	memory and performing a copy of the given string.
+
+	RETURN VALUE :
+	A pointer to the new string. NULL if the memory allocation fails.
+*/
 
 char	*ft_strdup(const char *s1)
 {

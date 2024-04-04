@@ -6,11 +6,17 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 18:05:21 by claprand          #+#    #+#             */
-/*   Updated: 2024/03/24 18:11:07 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/04 14:57:57 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+/*
+	DESCRIPTION :
+	The function ft_isprint checks whether c is a printable character or not.
+
+	RETURN VALUE :
+	Non-zero if c is printable, zero if not.
+*/
 
 int	ft_isprint(int c)
 {

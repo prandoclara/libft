@@ -6,30 +6,44 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 20:10:07 by claprand          #+#    #+#             */
-/*   Updated: 2024/03/24 20:40:19 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/04 15:06:33 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+/*
+	DESCRIPTION :
+	The function ft_strnstr searches the first n bytes of the given string
+	s1 for the first occurence of the full string s2.
+	Characters that appear after \0 are not searched.
+
+	RETURN VALUE :
+	A pointer to the first character of the first occurrence of s2.
+	A pointer to s1 if s2 is empty.
+	NULL if s2 occurs nowhere in s1.
+*/
+
+char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 {
+	size_t	s2len;
 	size_t	i;
 	size_t	j;
 
+	s2len = ft_strlen((char *)s2);
+	if (s1 == s2 || s2len == 0)
+		return ((char *)s1);
 	i = 0;
-	if (haystack[i] == '\0')
+	if (s1[i] == '\0')
 		return (0);
-	if (needle[0] == '\0')
-		return ((char *)haystack);
-	j = 0;
-	while (haystack[i])
+	while (s1[i] && i < len)
 	{
-		while (haystack[i + j] == needle[j] && (i + j) < len)
+		j = 0;
+		while (s1[i + j] == s2[j] && (i + j) < len && s1[i] && s2[i])
 		{
-			if (needle[j + 1] == '\0')
-				return ((char *)&haystack[i]);
 			j++;
+			if ((j == len && j == s2len) || j == s2len)
+				return ((char *)(s1 + i));
 		}
 		i++;
 	}
@@ -50,12 +64,16 @@ int main(void)
 	printf("%s\n", ft_strnstr(s1, s4, 20));
 	printf("%s\n", ft_strnstr(s3, s2, 20));
 	printf("%s\n", ft_strnstr(s1, s2, 10));
+	printf("%s\n", ft_strnstr("lorem ipsum dolor sit amet", "dolor", 15));
+	printf("%s\n", ft_strnstr("lorem ipsum dolor sit amet", "ipsumm", 30));
 	printf("\n");
 	printf("%s\n", strnstr(s1, s2, 20));
 	printf("%s\n", strnstr(s1, s3, 20));
 	printf("%s\n", strnstr(s1, s4, 20));
 	printf("%s\n", strnstr(s3, s2, 20));
 	printf("%s\n", strnstr(s1, s2, 10));
+	printf("%s\n", strnstr("lorem ipsum dolor sit amet", "dolor", 15));
+	printf("%s\n", strnstr("lorem ipsum dolor sit amet", "ipsumm", 30));
 	return (0);
 }
 */

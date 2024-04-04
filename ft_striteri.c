@@ -6,11 +6,20 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 11:13:06 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/03 14:39:30 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/04 15:04:47 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+	DESCRIPTION :
+	The function ft_striteri applies the given function f to each
+	character in the given string s.
+
+	RETURN VALUE :
+	None.
+*/
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
@@ -18,7 +27,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 
 	i = 0;
 	if (!s || !f)
-		return (0);
+		return ;
 	while (s[i])
 	{
 		f(i, &s[i]);

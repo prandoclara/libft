@@ -6,11 +6,20 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 15:23:59 by claprand          #+#    #+#             */
-/*   Updated: 2024/03/23 15:38:05 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/04 15:04:01 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+	DESCRIPTION :
+	The function ft_putstr_fd writes the given string to the given
+	file descriptor.
+
+	RETURN VALUE :
+	None.
+*/
 
 void	ft_putstr_fd(char *s, int fd)
 {

@@ -6,11 +6,22 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 09:08:47 by claprand          #+#    #+#             */
-/*   Updated: 2024/03/27 11:09:24 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/04 15:06:57 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+	DESCRIPTION :
+	The function ft_strtrim removes any characters of the given set from
+	the beginning and end of the given string s1, and allocates sufficient
+	memory to store the trimmed copy of the string.
+
+	RETURN VALUE :
+	A pointer to the trimmed copy of the string.
+	NULL if the memory allocation fails.
+*/
 
 static int	ft_char_in_set(char c, char const *set)
 {

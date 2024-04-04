@@ -5,14 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/24 15:18:52 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/03 12:02:58 by claprand         ###   ########.fr       */
+/*   Created: 2024/04/04 14:55:25 by claprand          #+#    #+#             */
+/*   Updated: 2024/04/04 14:56:20 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(char *s)
+/*
+	DESCRIPTION :
+	The function ft_atoi converts a string into an int.
+
+	RETURN VALUE :
+	The converted int.
+*/
+
+int	ft_atoi(const char *str)
 {
 	int	i;
 	int	sign;
@@ -21,45 +29,54 @@ int	ft_atoi(char *s)
 	i = 0;
 	sign = 1;
 	nb = 0;
-	while (s[i] == '\t' || s[i] == '\v' || s[i] == '\n'
-		|| s[i] == '\r' || s[i] == '\f' || s[i] == ' ')
+	while (str[i] == '\t' || str[i] == '\v' || str[i] == '\n'
+		|| str[i] == '\r' || str[i] == '\f' || str[i] == ' ')
 		i++;
-	if (s[i] == '-' || s[i] == '+')
+	if (str[i] == '+')
+		i++;
+	else if (str[i] == '-')
 	{
-		if (s[i] == '-')
-		{
-			sign = -1;
-			i++;
-		}
+		sign *= -1;
 		i++;
 	}
-	while (s[i] && s[i] >= '0' && s[i] <= '9')
+	while (str[i] && str[i] >= '0' && str[i] <= '9')
 	{
-		nb = nb * 10 + (s[i] - '0');
+		nb = (nb * 10) + (str[i] - '0');
 		i++;
 	}
 	return (nb * sign);
 }
 
-/*#include <stdio.h>
-
+/*
+#include <stdio.h>
 int main(void)
 {
-	char s1[] = "+123";
-	char s2[] = "-456";
-	char s3[] = "0";
-	char s4[] = "";
+	char str1[] = "+123";
+	char str2[] = "-456";
+	char str3[] = "0";
+	char str4[] = "";
 
-	printf("%d\n", ft_atoi(s1));
-	printf("%d\n", ft_atoi(s2));
-	printf("%d\n", ft_atoi(s3));
-	printf("%d\n", ft_atoi(s4));
+	printf("%d\n", ft_atoi(str1));
+	printf("%d\n", ft_atoi(str2));
+	printf("%d\n", ft_atoi(str3));
+	printf("%d\n", ft_atoi(str4));
+	printf("%d\n", ft_atoi("\n\n\n  -46\b9 \n5d6"));
+	printf("%d\n", ft_atoi("-2147483648"));
+	printf("%d\n", ft_atoi("-47-5"));
+	printf("%d\n", ft_atoi("--47"));
+	printf("%d\n", ft_atoi("-+48"));
+	printf("%d\n", ft_atoi("-4886"));
 	printf("\n");
-	printf("%d\n", atoi(s1));
-	printf("%d\n", atoi(s2));
-	printf("%d\n", atoi(s3));
-	printf("%d\n", atoi(s4));
-
+	printf("%d\n", atoi(str1));
+	printf("%d\n", atoi(str2));
+	printf("%d\n", atoi(str3));
+	printf("%d\n", atoi(str4));
+	printf("%d\n", atoi("\n\n\n  -46\b9 \n5d6"));
+	printf("%d\n", atoi("-2147483648"));
+	printf("%d\n", atoi("-47-5"));
+	printf("%d\n", atoi("--47"));
+	printf("%d\n", atoi("-+48"));
+	printf("%d\n", atoi("-4886"));
 	return (0);
 }
 */

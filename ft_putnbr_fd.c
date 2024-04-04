@@ -6,11 +6,20 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 15:39:08 by claprand          #+#    #+#             */
-/*   Updated: 2024/03/23 16:41:38 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/04 15:03:51 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+	DESCRIPTION :
+	The function ft_putnbr_fd writes the given integer n on the given
+	file descriptor by converting it into char.
+
+	RETURN VALUE :
+	None.
+*/
 
 void	ft_putnbr_fd(int n, int fd)
 {

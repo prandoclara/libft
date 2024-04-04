@@ -6,11 +6,17 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 16:20:47 by claprand          #+#    #+#             */
-/*   Updated: 2024/03/24 16:25:02 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/04 14:57:46 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+/*
+	DESCRIPTION :
+	The function ft_isdigit checks whether c is a digit character or not.
+
+	RETURN VALUE:
+	Non-zero if c is a digit, zero if not.
+*/
 
 int	ft_isdigit(int c)
 {

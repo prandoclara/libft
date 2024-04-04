@@ -6,11 +6,22 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 16:20:00 by claprand          #+#    #+#             */
-/*   Updated: 2024/03/27 09:00:24 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/04 15:07:10 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+	DESCRIPTION :
+	The function ft_substr extracts a substring from the given string by
+	allocating sufficient memory for the new string starting at index start
+	and ending at len characters.
+
+	RETURN VALUE :
+	A pointer to the new string.
+	NULL if the memory allocation fails.
+*/
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -35,8 +46,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 int main(void)
 {
 	char s[] = "hello";
+	char	str[] = "lorem ipsum dolor sit amet";
 
 	printf("%s\n", ft_substr(s, 4, 20));
+	printf("%s\n", ft_substr(str, 0, 10));
+	printf("%s\n", ft_substr(str, 7, 10));
 	return (0);
 }
 */

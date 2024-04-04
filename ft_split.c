@@ -6,11 +6,21 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 13:17:26 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/03 14:38:08 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/04 15:04:14 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+	DESCRIPTION :
+	The function ft_split allocates and copies an array of strings by 
+	splitting the given string s using the given separator c.
+
+	RETURN VALUE :
+	An array of strings resulting from the split. NULL if the memory
+	allocation fails.
+*/
 
 static int	count_words(char *s, char c)
 {

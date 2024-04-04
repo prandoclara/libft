@@ -6,11 +6,22 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/25 16:39:43 by claprand          #+#    #+#             */
-/*   Updated: 2024/03/26 12:47:28 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/04 15:03:18 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+	DESCRIPTION :
+	The function ft_memset fills the first len bytes of the memory area
+	pointed	to by b with the byte c. Both b and c are interpreted as 
+	unsigned char.
+
+	RETURN VALUE :
+	A pointer to memory area s.
+*/
+
 
 void	*ft_memset(void *b, int c, size_t len)
 {

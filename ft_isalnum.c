@@ -6,11 +6,19 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 17:41:16 by claprand          #+#    #+#             */
-/*   Updated: 2024/03/24 17:46:45 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/04 14:57:07 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+	DESCRIPTION :
+	The function ft_isalnum checks whether the value of c is alphanumeric.
+
+	RETURN VALUE :
+	Non-zero if c is alphanumeric, zero if not.
+*/
 
 int	ft_isalnum(int c)
 {

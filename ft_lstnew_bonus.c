@@ -6,11 +6,22 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 12:21:36 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/03 14:42:18 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/04 14:59:12 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*
+	DESCRIPTION :
+	The function ft_lstnew allocates memory for a new list node and 
+	initializes its content to the value passed as parameter, before
+	setting its next node to NULL. 
+
+	RESULT VALUE :
+	The new list ode.
+*/
+
 
 t_list	*ft_lstnew(void *content)
 {
