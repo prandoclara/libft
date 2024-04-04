@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 15:50:43 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/04 15:04:38 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/04 16:27:47 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,14 @@
 char	*ft_strdup(const char *s1)
 {
 	char	*s2;
+	size_t	len;
 
-	s2 = malloc(ft_strlen((char *)s1) + 1 * sizeof(char));
+	len = ft_strlen((char *)s1) + 1;
+	s2 = malloc(len * sizeof(char));
 	if (!s2)
 		return (NULL);
-	return (ft_memcpy(s2, s1, ft_strlen((char *)s1) + 1));
+	ft_strlcpy(s2, s1, len);
+	return (s2);
 }
 
 /*

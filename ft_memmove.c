@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 12:29:31 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/04 15:03:06 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/04 16:14:10 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,10 +66,12 @@ int main()
 	printf("%s\n", (char *)ft_memmove(x, s, len));
 	printf("%s\n", (char *)ft_memmove(src, dest, 8));
 	printf("%s\n", (char *)ft_memmove(src, dest, 0));
+	printf("%s\n", (char *)ft_memmove(dest, src, 8));
 	printf("\n");
 	printf("%s\n", (char *)memmove(s, x, len));
 	printf("%s\n", (char *)memmove(src, dest, 8));
 	printf("%s\n", (char *)memmove(src, dest, 0));
+	printf("%s\n", (char *)memmove(dest, src, 8));
 	return (0);
 }
 */

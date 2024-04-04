@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 13:08:10 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/04 15:06:47 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/04 16:33:20 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ int main(void)
 	char s[] = "hello";
 	char x[] = "";
 	char *empty;
+	char	str3[] = "bonjourno";
 	int c;
 
 	c = 'l';
@@ -56,10 +57,12 @@ int main(void)
 	printf("%s\n", ft_strrchr(s, c));
 	printf("%s\n", ft_strrchr(empty, 'V'));
 	printf("%s\n", ft_strrchr(x, 'V'));
+	printf("%s\n", ft_strrchr(str3, '\0'));
 	printf("\n");
 	printf("%s\n", strrchr(s, c));
 	printf("%s\n", strrchr(empty, 'V'));
 	printf("%s\n", strrchr(x, 'V'));
+	printf("%s\n", ft_strrchr(str3, '\0'));
 	return (0);
 }
 */

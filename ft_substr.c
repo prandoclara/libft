@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 16:20:00 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/04 15:07:10 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/04 16:29:11 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,8 @@ int main(void)
 	printf("%s\n", ft_substr(s, 4, 20));
 	printf("%s\n", ft_substr(str, 0, 10));
 	printf("%s\n", ft_substr(str, 7, 10));
+	printf("%s\n", ft_substr(str, 7, 10));
+	printf("%s\n", ft_substr(str, 0, 10));
 	return (0);
 }
 */

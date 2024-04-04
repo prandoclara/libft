@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 20:10:07 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/04 15:06:33 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/04 16:33:02 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,23 @@ int main(void)
 	printf("%s\n", strnstr(s1, s2, 10));
 	printf("%s\n", strnstr("lorem ipsum dolor sit amet", "dolor", 15));
 	printf("%s\n", strnstr("lorem ipsum dolor sit amet", "ipsumm", 30));
+	printf("\n");
+	printf("\n");
+	printf("NEW");
+	printf("\n");
+	printf("%s\n", ft_strnstr("lorem ipsum dolor sit amet", "ipsum", 15));
+	printf("%s\n", ft_strnstr("lorem ipsum dolor sit amet", "ipsumm", 30));
+	printf("%s\n", ft_strnstr("lorem ipsum dolor sit amet", "dol", 30));
+	printf("%s\n", ft_strnstr("lorem ipsum dolor sit amet", "sit", 10));
+	printf("%s\n", ft_strnstr("lorem ipsum dolor sit amet", "dolor", 15));
+	printf("\n");
+	printf("NEW");
+	printf("\n");
+	printf("%s\n", strnstr("lorem ipsum dolor sit amet", "ipsum", 15));
+	printf("%s\n", strnstr("lorem ipsum dolor sit amet", "ipsumm", 30));
+	printf("%s\n", strnstr("lorem ipsum dolor sit amet", "dol", 30));
+	printf("%s\n", ft_strnstr("lorem ipsum dolor sit amet", "sit", 10));
+	printf("%s\n", ft_strnstr("lorem ipsum dolor sit amet", "dolor", 15));
 	return (0);
 }
 */

@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 15:39:08 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/04 15:03:51 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/04 16:31:25 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,9 @@ void	ft_putnbr_fd(int n, int fd)
 	ft_putchar_fd (n % 10 + '0', fd);
 }
 
-/*int main(void)
+/*
+int main(void)
 {
 	ft_putnbr_fd(-2147483648, 1);
-}*/
+}
+*/

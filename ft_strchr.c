@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 12:49:09 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/04 15:04:26 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/04 16:32:11 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,19 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int	i;
+	int				i;
+	unsigned char	ch;
 
 	i = 0;
-	if ((char)s[i] == '\0')
-		return ((char *)&s[i]);
+	ch = c;
+	if (ch == '\0')
+	{
+		i = ft_strlen((char *)s);
+		return ((char *)s + i++);
+	}
 	while ((char)s[i])
 	{
-		if ((char)s[i] == (char)c)
+		if ((char)s[i] == ch)
 			return ((char *)&s[i]);
 		i++;
 	}
@@ -48,9 +53,11 @@ int main(void)
 	c = 'l';
 	printf("%s\n", ft_strchr(s, c));
 	printf("%s\n", ft_strchr(s, 's'));
+	printf("%s\n", ft_strchr(s, '\0'));
 	printf("\n");
 	printf("%s\n", strchr(s, c));
 	printf("%s\n", strchr(s, 's'));
+	printf("%s\n", strchr(s, '\0'));
 	return (0);
 }
 */

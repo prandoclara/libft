@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 20:52:22 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/04 15:05:27 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/04 16:34:03 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 	src, with the goal to facilitate truncaction detection.
 */
 
-size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
 
@@ -64,6 +64,8 @@ int main(void)
 	printf("%lu\n", ft_strlcpy(s3, s2, 1));
 	printf("%lu\n", ft_strlcpy(s1, s2, 2));
 	printf("%lu\n", ft_strlcpy(dest, "lorem ipsum dolor sit amet", 0));
+	write(1, dest, 16);
+	write(1, "\n", 1);
 	printf("%lu\n", ft_strlcpy(dst, src, 0));
 	printf("\n");
 	printf("%lu\n", strlcpy(s1, s2, 6));
@@ -71,6 +73,8 @@ int main(void)
 	printf("%lu\n", strlcpy(s3, s2, 1));
 	printf("%lu\n", strlcpy(s1, s2, 2));
 	printf("%lu\n", ft_strlcpy(dest, "lorem ipsum dolor sit amet", 0));
+	write(1, dest, 16);
+	write(1, "\n", 1);
 	printf("%lu\n", strlcpy(dst, src, 0));
 	return (0);
 }
