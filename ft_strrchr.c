@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 13:08:10 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/06 15:46:25 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/06 15:48:07 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	*ft_strrchr(const char *s, int c)
 	return (0);
 }
 
-
+/*
 #include <stdio.h>
 int main(void)
 {
@@ -68,3 +68,4 @@ int main(void)
 	printf("%s\n", strrchr(s3, 0));
 	return (0);
 }
+*/
