@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 15:43:27 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/06 15:21:11 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/06 15:25:44 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*ptr;
 
-	if (nb && size > SIZE_MAX / nb)
+	if (count && size > SIZE_MAX / count)
         return (NULL);
 	ptr = (void *)malloc(count * size);
 	if (!ptr)
