@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 13:08:10 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/06 15:48:07 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/06 15:50:02 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,14 @@ char	*ft_strrchr(const char *s, int c)
 	int	i;
 
 	i = 0;
-	if ((char)s[i] == '\0')
+	if (s[i] == '\0')
 		return (NULL);
 	while (s[i])
 		i++;
 	while (i >= 0)
 	{
 		{
-			if ((char)s[i] == (char)c)
+			if (s[i] == (char)c)
 				return ((char *)(s + i));
 			i--;
 		}
