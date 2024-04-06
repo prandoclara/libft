@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 13:08:10 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/04 16:33:20 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/06 15:46:25 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,14 @@ char	*ft_strrchr(const char *s, int c)
 	{
 		{
 			if ((char)s[i] == (char)c)
-				return ((char *)&s[i]);
+				return ((char *)(s + i));
 			i--;
 		}
 	}
 	return (0);
 }
 
-/*
+
 #include <stdio.h>
 int main(void)
 {
@@ -50,6 +50,7 @@ int main(void)
 	char x[] = "";
 	char *empty;
 	char	str3[] = "bonjourno";
+	char s3[] = "";
 	int c;
 
 	c = 'l';
@@ -58,11 +59,12 @@ int main(void)
 	printf("%s\n", ft_strrchr(empty, 'V'));
 	printf("%s\n", ft_strrchr(x, 'V'));
 	printf("%s\n", ft_strrchr(str3, '\0'));
+	printf("%s\n", strrchr(s3, 0));
 	printf("\n");
 	printf("%s\n", strrchr(s, c));
 	printf("%s\n", strrchr(empty, 'V'));
 	printf("%s\n", strrchr(x, 'V'));
-	printf("%s\n", ft_strrchr(str3, '\0'));
+	printf("%s\n", strrchr(str3, '\0'));
+	printf("%s\n", strrchr(s3, 0));
 	return (0);
 }
-*/

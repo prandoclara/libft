@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 12:29:31 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/04 16:14:10 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/06 15:44:19 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,8 @@ int main()
 	char s[20] = "hello";
 	char x[] = "bonjour";
 	char src[] = "lorem ipsum dolor sit amet";
+	char sResult[] = {67, 68, 67, 68, 69, 0, 45};
+	// char sResult2[] = {67, 67, 68, 68, 69, 0, 45};
 	char *dest;
 	size_t	len;
 
@@ -67,11 +69,13 @@ int main()
 	printf("%s\n", (char *)ft_memmove(src, dest, 8));
 	printf("%s\n", (char *)ft_memmove(src, dest, 0));
 	printf("%s\n", (char *)ft_memmove(dest, src, 8));
+	printf("%s\n", (char *)ft_memmove(sResult + 1, sResult, 2));
 	printf("\n");
 	printf("%s\n", (char *)memmove(s, x, len));
 	printf("%s\n", (char *)memmove(src, dest, 8));
 	printf("%s\n", (char *)memmove(src, dest, 0));
 	printf("%s\n", (char *)memmove(dest, src, 8));
+	printf("%s\n", (char *)memmove(sResult + 1, sResult, 2));
 	return (0);
 }
 */
