@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 16:20:00 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/08 14:42:48 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/08 14:50:47 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	s2 = malloc(len + 1 * sizeof(char));
 	if (!s2)
 		return (NULL);
-	return (s2 = ft_memmove(s2, (const char *)(s + start), len));
+	return (s2 = ft_memmove(s2, (char const *)(s + start), len));
 }
 
 /*
