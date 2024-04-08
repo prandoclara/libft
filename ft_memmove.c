@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 12:29:31 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/08 14:22:30 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/08 14:27:13 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	i;
+	int	i;
 
 	if (!dst && !src)
 		return (0);
