@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 10:47:33 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/05 08:53:17 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/08 14:19:14 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,26 +25,24 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char			*s2;
-	unsigned int	i;
+	char	*str;
+	size_t	i;
 
+	if (!s || !f)
+		return (NULL);
 	i = 0;
-	if (!s || (!s && !f))
+	str = ft_strdup(s);
+	if (!str)
 		return (NULL);
-	if (!f)
-		return ((char *)s);
-	s2 = malloc(ft_strlen((char *)s) * sizeof(char) + 1);
-	if (!s2)
-		return (NULL);
-	while (s[i])
+	while (str[i])
 	{
-		s2[i] = (*f)(i, s[i]);
+		str[i] = (*f)(i, str[i]);
 		i++;
 	}
-	return (s2);
+	return (str);
 }
 
-/*
+
 char	mapi(unsigned int i, char c)
 {
 	static int indexArray[11] = {0};
@@ -74,4 +72,3 @@ int		main(void)
 	printf("%s\n", strmapi);
 	return (0);
 }
-*/

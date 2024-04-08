@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 20:52:22 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/04 16:34:03 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/08 13:54:13 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 			dst[i] = src[i];
 			i++;
 		}
+		dst[i] = '\0';
 	}
-	dst[i] = '\0';
 	while (src[i])
 		i++;
 	return (i);

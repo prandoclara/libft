@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 12:29:31 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/06 15:44:19 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/08 14:22:30 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,10 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	if (!dst && !src)
 		return (0);
-	if (dst > src && (unsigned char *)dst < (unsigned char *)src + len)
+	if (dst > src)
 	{
-		i = len - 1;
-		while (i > 0)
+		i = (int)len - 1;
+		while (i >= 0)
 		{
 			*(char *)(dst + i) = *(char *)(src + i);
 			i--;
@@ -42,7 +42,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	else
 	{
 		i = 0;
-		while (i < len)
+		while (i < (int)len)
 		{
 			*(char *)(dst + i) = *(char *)(src + i);
 			i++;
