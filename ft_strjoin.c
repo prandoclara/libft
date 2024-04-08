@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 11:21:08 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/08 15:16:28 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/08 15:25:13 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		i;
 	int		j;
 
-	if (!s1 || !s2 ||
-		!(new_str = (char *)malloc(ft_strlen((char *)s1) + ft_strlen((char *)s2) + 1)))
+	if (!s1 || !s2)
 		return (0);
+	new_str = (char *)malloc(ft_strlen((char *)s1) + ft_strlen((char *)s2) + 1);
+	if (!new_str)
+		return (NULL);
 	i = 0;
 	while (s1[i] != '\0')
 	{
