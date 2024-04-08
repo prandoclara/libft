@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 16:20:00 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/08 14:37:04 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/08 14:39:07 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,27 +25,23 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char	*res;
-	char	*src;
-	size_t	reslen;
+	char	*s2;
+	size_t	slen;
 
 	if (!s)
 		return (NULL);
-	if (ft_strlen((char *)s) < (size_t)start)
-		return (ft_strdup(""));
-	src = (char *)s + start;
-	if (ft_strlen((char *)src) < len)
-		reslen = ft_strlen((char *)src) + 1;
-	else
-		reslen = len + 1;
-	res = malloc(reslen * sizeof(char));
-	if (!res)
+	slen = ft_strlen((char *)s);
+	if (start > slen)
+		start = slen;
+	if (len > slen - start)
+		len = slen - start;
+	s2 = malloc(len + 1 * sizeof(char));
+	if (!s2)
 		return (NULL);
-	ft_strlcpy(res, src, reslen);
-	return (res);
+	return (s2 = ft_memmove(s2, (const char *)(s + start), len));
 }
 
-/*
+
 #include <stdio.h>
 int main(void)
 {
@@ -59,4 +55,3 @@ int main(void)
 	printf("%s\n", ft_substr(str, 0, 10));
 	return (0);
 }
-*/
