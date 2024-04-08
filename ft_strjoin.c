@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 11:21:08 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/08 14:31:00 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/08 14:58:43 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,29 +22,36 @@
 	NULL if the memory allocation fails.
 */
 
-char	*ft_strjoin(char const *s1, char const *s2)
+static char	*ft_strcat(char *dest, const char *src)
 {
-	char	*s;
-	int		i;
-	size_t	len;
+	int	i;
+	int	len;
 
-	len = ft_strlen((char *)s1) + ft_strlen((char *)s2);
-	s = malloc(len + 1 * sizeof(char));
-	if (!s)
-		return (NULL);
-	len = 0;
-	while (s1[len])
-	{
-		s[len] = s1[len];
-		len++;
-	}
 	i = 0;
-	while (s2[i])
+	len = ft_strlen((char *)dest);
+	while (src[i])
 	{
-		s[len + i] = s2[i];
+		dest[len + i] = src[i];
 		i++;
 	}
-	return (s);
+	dest[len + i] = 0;
+	return (dest);
+}
+
+char	*ft_strjoin(char const *s1, char const *s2)
+{
+	char	*str;
+	int		i;
+	int		j;
+
+	if (!s1 || !s2)
+		return (NULL);
+	i = ft_strlen((char *)s1);
+	j = ft_strlen((char *)s2);
+	str = malloc((i + j) + 1 * sizeof(char));
+	if (!str)
+		return (NULL);
+	return (str = ft_strcat(ft_memcpy(str, s1, i), s2));
 }
 
 /*
