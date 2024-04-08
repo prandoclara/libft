@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 11:21:08 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/08 14:12:55 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/08 14:31:00 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	len = ft_strlen((char *)s1) + ft_strlen((char *)s2);
 	s = malloc(len + 1 * sizeof(char));
 	if (!s)
-		return (NULL);
-	if (!s1 && !s2)
 		return (NULL);
 	len = 0;
 	while (s1[len])

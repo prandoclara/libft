@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 10:47:33 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/08 14:19:14 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/08 14:29:50 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,7 @@ char	mapi(unsigned int i, char c)
 		return (c);
 }
 
+/*
 #include <stdio.h>
 int		main(void)
 {
@@ -72,3 +73,4 @@ int		main(void)
 	printf("%s\n", strmapi);
 	return (0);
 }
+*/
