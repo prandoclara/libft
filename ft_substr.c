@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 16:20:00 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/08 15:18:35 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/08 15:19:30 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (0);
 	i = start;
 	j = 0;
-	while ((unsigned int)i < ft_strlen((char *)s) && j < len)
+	while (i < (unsigned int)ft_strlen((char *)s) && j < len)
 		new_str[j++] = s[i++];
 	new_str[j] = '\0';
 	return (new_str);
