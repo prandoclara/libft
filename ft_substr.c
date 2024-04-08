@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 16:20:00 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/08 15:08:08 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/08 15:09:11 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (NULL);
-	if (ft_strlen(s) < (size_t)start)
+	if (ft_strlen((char *)s) < (size_t)start)
 		return (ft_strdup(""));
 	src = (char *)s + start;
-	if (ft_strlen(src) < len)
-		reslen = ft_strlen(src) + 1;
+	if (ft_strlen((char *)src) < len)
+		reslen = ft_strlen((char *)src) + 1;
 	else
 		reslen = len + 1;
 	res = malloc(reslen * sizeof(char));

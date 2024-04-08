@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 11:21:08 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/08 15:07:42 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/08 15:09:43 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	size_t	len;
 	int		i;
 
-	len = ft_strlen(s1) + ft_strlen(s2);
+	len = ft_strlen((char *)s1) + ft_strlen((char *)s2);
 	s = ft_calloc(len + 1, sizeof(char));
 	if (!s)
 		return (NULL);
