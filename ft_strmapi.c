@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/27 10:47:33 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/08 14:29:50 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/08 15:36:43 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,10 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (str);
 }
 
-
+/*
 char	mapi(unsigned int i, char c)
 {
-	static int indexArray[11] = {0};
+	static int	indexArray[11] = {0};
 
 	if (i > 10 || indexArray[i] == 1)
 		write(1, "wrong index\n", 12);
@@ -59,7 +59,7 @@ char	mapi(unsigned int i, char c)
 		return (c);
 }
 
-/*
+
 #include <stdio.h>
 int		main(void)
 {
