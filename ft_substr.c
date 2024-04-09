@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/26 16:20:00 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/08 15:47:00 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/09 10:40:36 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,22 +23,25 @@
 	NULL if the memory allocation fails.
 */
 
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*new_str;
-	size_t	i;
-	size_t	j;
+	size_t reslen;
 
 	if (!s)
 		return (0);
-	new_str = (char *)ft_calloc(len + 1, sizeof(char));
+	if ((size_t)ft_strlen((char *)s) < (size_t)start)
+		return (ft_strdup(""));
+	s = s + start;
+	if ((size_t)ft_strlen((char *)s) < len)
+		reslen = ft_strlen((char *)s) + 1;
+	else 
+		reslen = len + 1;
+	new_str = malloc(reslen * sizeof(char));
 	if (!new_str)
 		return (NULL);
-	i = start;
-	j = 0;
-	while (i < (size_t)ft_strlen((char *)s) && j < len)
-		new_str[j++] = s[i++];
-	new_str[j] = '\0';
+	ft_strlcpy((char *)new_str, (char *)s, reslen);
 	return (new_str);
 }
 
