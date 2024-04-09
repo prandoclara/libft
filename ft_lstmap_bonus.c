@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 11:28:08 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/09 12:04:17 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/09 13:23:54 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,26 +28,22 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*newlist;
-	t_list	*node;
+	t_list	*new;
+	t_list	*element;
 
-	if (!lst)
+	if (!f || !lst)
 		return (NULL);
-	newlist = NULL;
-	node = NULL;
+	new = NULL;
 	while (lst)
 	{
-		if (!f)
-			node = ft_lstnew(lst->content);
-		else
-			node = ft_lstnew(f(lst->content));
-		if (!node)
+		element = ft_lstnew((*f)(lst->content));
+		if (!element)
 		{
-			ft_lstclear(&newlist, del);
+			ft_lstclear(&new, del);
 			return (NULL);
 		}
-		ft_lstadd_back(&newlist, node);
+		ft_lstadd_back(&new, element);
 		lst = lst->next;
 	}
-	return (newlist);
+	return (new);
 }
