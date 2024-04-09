@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 11:16:58 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/09 11:23:57 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/09 12:04:37 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*tmp;
-	
+
 	if (!lst)
 		return ;
 	if (*lst)

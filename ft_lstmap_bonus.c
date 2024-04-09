@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 11:28:08 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/09 11:35:41 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/09 12:04:17 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*newlist;
 	t_list	*node;
-	
+
 	if (!lst)
 		return (NULL);
 	newlist = NULL;

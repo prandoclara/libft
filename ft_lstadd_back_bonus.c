@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 11:02:26 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/09 11:13:22 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/09 12:06:13 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 		return ;
 	if (!*lst)
 	{
-		*lst = new; 
+		*lst = new;
 		return ;
 	}
 	last = ft_lstlast(*lst);
-	last->next = new;	
+	last->next = new;
 }
