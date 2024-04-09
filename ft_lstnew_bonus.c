@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/28 12:21:36 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/09 12:13:46 by claprand         ###   ########.fr       */
+/*   Updated: 2024/04/09 13:28:55 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*lst;
 
-	lst = malloc(sizeof(t_list));
+	lst = (t_list *)malloc(sizeof(t_list));
 	if (!lst)
 		return (NULL);
 	lst->content = content;
