@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/03 13:17:26 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/04 15:04:14 by claprand         ###   ########.fr       */
+/*   Updated: 2024/05/21 10:23:56 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 	allocation fails.
 */
 
-static int	count_words(char *s, char c)
+static int	count_words(const char *s, char c)
 {
 	int	i;
 	int	words;
@@ -40,7 +40,7 @@ static int	count_words(char *s, char c)
 	return (words);
 }
 
-static char	**malloc_strs(char **strs, char *s, char c)
+static char	**malloc_strs(char **strs, const char *s, char c)
 {
 	int	count;
 	int	i;
@@ -67,7 +67,7 @@ static char	**malloc_strs(char **strs, char *s, char c)
 	return (strs);
 }
 
-static char	**write_strs(char **strs, char *s, char c)
+static char	**write_strs(char **strs, const char *s, char c)
 {
 	int	i;
 	int	j;
@@ -108,7 +108,7 @@ static char	**free_strs(char **strs)
 	return (NULL);
 }
 
-char	**ft_split(char *s, char c)
+char	**ft_split(const char *s, char c)
 {
 	char	**strs;
 	int		wordcount;
@@ -152,5 +152,4 @@ int main(void)
 	}
 	free_strs(result);
 	return (0);
-}
-*/
+}*/

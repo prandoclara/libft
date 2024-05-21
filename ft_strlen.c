@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/24 15:12:02 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/04 15:06:07 by claprand         ###   ########.fr       */
+/*   Updated: 2024/05/21 10:23:15 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 	The number of bytes in the string str.
 */
 
-int	ft_strlen(char *s)
+int	ft_strlen(const char *s)
 {
 	int	i;
 
