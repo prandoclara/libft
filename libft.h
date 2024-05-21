@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 15:08:38 by claprand          #+#    #+#             */
-/*   Updated: 2024/04/09 11:29:05 by claprand         ###   ########.fr       */
+/*   Updated: 2024/05/21 12:14:30 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putendl_fd(char *s, int fd);
 char	*ft_itoa(int n);
-int		ft_strlen(char *s);
+int		ft_strlen(const char *s);
 int		ft_atoi(const char *s);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -59,7 +59,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strtrim(char const *s1, char const *set);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	*ft_strjoin(char const *s1, char const *s2);
-char	**ft_split(char *str, char c);
+char	**ft_split(const char *str, char c);
 int		ft_lstsize(t_list *lst);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 t_list	*ft_lstnew(void *content);
