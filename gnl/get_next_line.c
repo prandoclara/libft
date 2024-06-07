@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 11:06:31 by claprand          #+#    #+#             */
-/*   Updated: 2024/06/05 21:29:41 by claprand         ###   ########.fr       */
+/*   Updated: 2024/06/07 10:36:55 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -134,17 +134,3 @@ char	*get_next_line(int fd)
 	str = NULL;
 	return (NULL);
 }
-
-// int	main(void)
-// {
-// 	char	*line;
-// 	int		fd1;
-	
-// 	fd1 = open("test.txt", O_RDONLY);
-// 	line = get_next_line(fd1);
-// 		printf("%s", line);
-// 		free(line);
-
-// 	close(fd1);
-// 	return (0);
-// }
