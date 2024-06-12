@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 11:06:31 by claprand          #+#    #+#             */
-/*   Updated: 2024/06/12 10:06:14 by claprand         ###   ########.fr       */
+/*   Updated: 2024/06/12 10:10:34 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ static char	*keep_what_is_left(char *str)
 		free(str);
 		return (NULL);
 	}	
-	left_str = (char *)malloc(sizeof(char) * (ft_strlen(str) - i + 1));
+	left_str = (char *)malloc(sizeof(char) * (ft_str_len(str) - i + 1));
 	if (!left_str)
 		return (NULL);
 	i++;
