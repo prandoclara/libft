@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/30 11:06:31 by claprand          #+#    #+#             */
-/*   Updated: 2024/06/05 15:34:55 by claprand         ###   ########.fr       */
+/*   Updated: 2024/06/12 10:06:31 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ char	*ft_strjoin_gnl(char *s1, char *s2)
 	return (new_str);
 }
 
-char	*ft_strchr(char *s, int c)
+char	*ft_str_chr(char *s, int c)
 {
 	int				i;
 	unsigned char	ch;
