@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 15:08:38 by claprand          #+#    #+#             */
-/*   Updated: 2024/06/07 10:35:35 by claprand         ###   ########.fr       */
+/*   Updated: 2024/06/26 13:46:08 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <string.h>
 # include <strings.h>
 # include <stdint.h>
+# include <stdarg.h>
 
 typedef struct s_list
 {
@@ -69,5 +70,24 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+char	*get_next_line(int fd);
+int		ft_str_len(const char *s);
+char	*ft_str_chr(char *s, int c);
+char	*ft_strjoin_gnl(char *s1, char *s2);
+
+int	ft_print_char(char c);
+int	ft_print_int(int n);
+int	ft_print_str(char *str);
+int	ft_print_x(unsigned int x, char c, int *len);
+int	ft_print_conversion(va_list	*arg, char *s, int i);
+int	ft_printf(const char *s, ...);
+int	ft_int_len(int n);
+int	ft_hex_len(int n);
+int	ft_print_u(unsigned int n);
+int	ft_printux(unsigned int x, char c, int *len);
+int	ft_print_pp(void *ptr, int *len);
+int	ft_print_percent(char c);
+int	ft_ui_len(unsigned int n);
 
 #endif
