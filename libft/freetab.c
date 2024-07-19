@@ -6,18 +6,18 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 12:25:10 by claprand          #+#    #+#             */
-/*   Updated: 2024/07/19 12:25:18 by claprand         ###   ########.fr       */
+/*   Updated: 2024/07/19 12:39:11 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-void	freetab(char **tab, int size)
+void	freetab(char **tab)
 {
 	int	i;
 
 	i = 0;
-	while (i < size)
+	while (tab[i])
 	{
 		free(tab[i]);
 		i++;
