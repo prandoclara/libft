@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 10:14:50 by claprand          #+#    #+#             */
-/*   Updated: 2024/07/21 21:41:27 by claprand         ###   ########.fr       */
+/*   Updated: 2024/07/21 21:47:26 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ int	ft_print_conversion(int fd, va_list	*arg, char *s, int i)
 	int	len;
 
 	len = 0;
+	(void)fd;
 	if (s[i] == 'c')
 		len = ft_print_char((int)va_arg(*arg, int));
 	else if (s[i] == 's')
