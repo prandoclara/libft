@@ -6,13 +6,13 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 10:14:50 by claprand          #+#    #+#             */
-/*   Updated: 2024/07/21 21:34:30 by claprand         ###   ########.fr       */
+/*   Updated: 2024/07/21 21:41:27 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_conversion(va_list	*arg, char *s, int i)
+int	ft_print_conversion(int fd, va_list	*arg, char *s, int i)
 {
 	int	len;
 
@@ -50,7 +50,7 @@ int	ft_printf(const char *s, ...)
 		if (s[i] == '%')
 		{
 			i++;
-			len += ft_print_conversion(&arg, (char *)s, i);
+			len += ft_print_conversion(1, &arg, (char *)s, i);
 			continue ;
 		}
 		else
@@ -75,7 +75,7 @@ int	ft_fprintf(int fd, const char *str, ...)
 	{
 		if (str[i] == '%')
 		{
-			printed_char_nb += ft_print_conversion(fd, args, str[i + 1]);
+			printed_char_nb += ft_print_conversion(fd, &args, (char *)str, i + 1);
 			i++;
 		}
 		else
