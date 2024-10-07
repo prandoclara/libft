@@ -6,7 +6,7 @@
 /*   By: claprand <claprand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/19 10:14:54 by claprand          #+#    #+#             */
-/*   Updated: 2024/07/21 22:02:56 by claprand         ###   ########.fr       */
+/*   Updated: 2024/10/01 14:35:59 by claprand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int	ft_print_str(char *str);
 int	ft_print_x(unsigned int x, char c, int *len);
 int	ft_print_conversion(va_list	*arg, char *s, int i);
 int	ft_printf(const char *s, ...);
+int	ft_fprintf(int fd, const char *str, ...);
 int	ft_int_len(int n);
 int	ft_hex_len(int n);
 int	ft_print_u(unsigned int n);

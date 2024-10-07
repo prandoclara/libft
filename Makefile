@@ -17,7 +17,7 @@ LIBFT_SRCS = \
     ft_split.c ft_strchr.c ft_strrchr.c ft_strdup.c ft_striteri.c ft_strjoin.c \
     ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnstr.c \
     ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c ft_putnbr_fd.c ft_strcmp.c \
-    freetab.c \
+    freetab.c ft_issign.c ft_iswhitespace.c \
 
 LIBFT_BONUS_SRCS = \
     ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
@@ -42,19 +42,19 @@ OBJS = $(SRCS:%.c=$(OBJ_DIR)/%.o)
 
 $(OBJ_DIR)/%.o: %.c
 	@mkdir -p $(dir $@)
-	$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(AR) $(NAME) $(OBJS)
+	@$(AR) $(NAME) $(OBJS)
 
 clean:
-	rm -rf $(OBJ_DIR)
+	@rm -rf $(OBJ_DIR)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
-re: fclean all
+re: @fclean all
 
 .PHONY: all bonus clean fclean re
